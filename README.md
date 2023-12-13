@@ -1,3 +1,3 @@
-# React + Vite
+Sarath Menon Portfolio
 
-Readme updated
+Sarath Menon is a filmmaker from Kerala. He did his studies at the London Film School. He has won many accolades for his works.
