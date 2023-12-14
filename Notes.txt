@@ -1,0 +1,50 @@
+###FONTS###
+
+Cinzel:
+
+Usage: Cinzel has a classic and elegant look, making it suitable for prominent headings or titles that need to convey a sense of sophistication and importance.
+Examples:
+Film Titles
+Project Names
+Section Headings
+Playfair Display:
+
+Usage: Playfair Display is a stylish serif font that can work well for subheadings and other places where you want to add a touch of sophistication without overpowering the design.
+Examples:
+Subheadings
+Project Descriptions
+Featured Content Titles
+Montserrat:
+
+Usage: Montserrat is a versatile sans-serif font that is clean and modern, making it suitable for body text and other areas where readability is crucial.
+Examples:
+Paragraphs of Text
+Navigation Menus
+Calls to Action
+
+
+###COLORS###
+
+primary: #1C1C1C
+Font-color: #E1C564
+
+
+###SIZING###
+
+Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+
+Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 56 / 64 / 80 / 96 / 128 

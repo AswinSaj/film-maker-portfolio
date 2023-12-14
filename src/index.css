@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root{
+  --color-bg: #1c1c1c;
+  --color-gray:#f4f4f4;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-text: #E1C564;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
 *{
   margin: 0;
   padding: 0;
