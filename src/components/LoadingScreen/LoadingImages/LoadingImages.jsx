@@ -23,7 +23,7 @@ const alternateVariant = {
 const zoomVariants = {
   initial: {
     borderRadius: '10px',
-    width: '20%',
+    width: '100%',
     height: '100%',
   },
   animate: {
@@ -40,7 +40,7 @@ const LoadingImages = ({ index, src, direction, style, alt, zoom = false }) => {
       timer = setTimeout(() => {
         console.log('Zoom Start')
         setZoomState(true)
-      }, 1250)
+      }, 1000)
     }
     return () => {
       clearTimeout(timer)
@@ -72,7 +72,7 @@ const LoadingImages = ({ index, src, direction, style, alt, zoom = false }) => {
           <motion.div
             variants={zoomVariants}
             initial='initial'
-            animate='animate'
+            animate={zoomState ? 'animate' : ''}
             className={styles.zoomState}
           >
             <img className={styles.image} src={src} alt={alt} />
