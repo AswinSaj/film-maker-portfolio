@@ -1,7 +1,9 @@
+import LoadingScreen from './components/LoadingScreen/LoadingScreen'
+
 function App() {
   return (
     <>
-      <div>Hello World</div>
+      <LoadingScreen />
     </>
   )
 }

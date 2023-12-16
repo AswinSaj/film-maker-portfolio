@@ -1,0 +1,28 @@
+.mainContainer {
+  height: 100svh;
+}
+.effectBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg);
+  height: 100svh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* left: -100vw; */
+}
+.text {
+  color: var(--color-text);
+  font-size: 10rem;
+}
+.text p {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  position: relative;
+  top: 100%;
+}
+.lineMask {
+  overflow: hidden;
+}
