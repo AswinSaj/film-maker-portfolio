@@ -1,17 +1,28 @@
-.container{
+.mainContainer {
   height: 100svh;
-  display: flex;
-  background-color: var(--color-bg);
-  overflow: hidden;
-  position: relative;
 }
-.child {
-  height: 133svh;
-  width: 20%;
+.effectBackground {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  gap: 1rem;
+  background-color: var(--color-bg);
+  height: 100svh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* left: -100vw; */
+}
+.text {
+  color: var(--color-text);
+  font-size: 10rem;
+}
+.text p {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  position: relative;
+  top: 100%;
+}
+.lineMask {
+  overflow: hidden;
 }

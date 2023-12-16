@@ -1,211 +1,62 @@
-import LoadingImages from './LoadingImages/LoadingImages'
+import { useEffect, useState } from 'react'
 import styles from './LoadingScreen.module.css'
-import { images } from './loadImages'
-import { motion } from 'framer-motion'
-
-const variantOne = {
-  initial: {
-    y: '100svh',
-  },
-  animate: {
-    y: '-33svh',
-    transition: {
-      duration: 1.2,
-    },
-  },
-}
-const variantTwo = {
-  initial: {
-    y: '-133svh',
-  },
-  animate: {
-    y: '0svh',
-    transition: {
-      duration: 1.2,
-    },
-  },
-}
+import { AnimatePresence, motion } from 'framer-motion'
 const LoadingScreen = () => {
+  const [show, setShow] = useState(false)
+  const [start, setStart] = useState(true)
+  const [canScroll, setCanScroll] = useState(false)
+  useEffect(() => {
+    if (canScroll) {
+      document.body.style.overflow = 'auto'
+    } else {
+      document.body.style.overflow = 'hidden'
+    }
+  }, [canScroll])
+  const contVariant = {
+    initial: { x: '-100vw' },
+    animate: { x: 0, transition: { duration: 1 } },
+    exit: { x: '200vw', transition: { duration: 1 } },
+  }
+  const animate = {
+    initial: { y: '100%' },
+    open: { y: '0%', transition: { duration: 0.5 } },
+    exit: { y: '-100%', transition: { duration: 0.5, delay: 1 } },
+  }
   return (
     <>
-      <div className={styles.container}>
-        <motion.div
-          variants={variantOne}
-          initial='initial'
-          animate='animate'
-          className={styles.child}
-        >
-          <LoadingImages
-            index={0}
-            src={images.Architecture}
-            direction={'down'}
-            style={{ order: 0 }}
-            alt={'Architecture Photo in London'}
-          />
-          <LoadingImages
-            index={1}
-            src={images.Camel}
-            direction={'down'}
-            style={{ order: 1 }}
-            alt={'Camel in Rajasthan'}
-          />
-          <LoadingImages
-            index={2}
-            src={images.Doorway}
-            direction={'down'}
-            style={{ order: 2 }}
-            alt={'Doorway in historical building'}
-          />
-          <LoadingImages
-            index={3}
-            src={images.Set}
-            direction={'down'}
-            style={{ order: 3 }}
-            alt={'Movie Set'}
-          />
-        </motion.div>
-        <motion.div
-          variants={variantTwo}
-          initial='initial'
-          animate='animate'
-          className={styles.child}
-        >
-          <LoadingImages
-            index={0}
-            src={images.Lady}
-            direction={'up'}
-            style={{ order: 3 }}
-            alt={'Rajasthani Woman'}
-          />
-          <LoadingImages
-            index={1}
-            src={images.Model}
-            direction={'up'}
-            style={{ order: 2 }}
-            alt={'Model PhotoShoot'}
-          />
-          <LoadingImages
-            index={2}
-            src={images.Model2}
-            direction={'up'}
-            style={{ order: 1 }}
-            alt={'Model PhotoShoot 2'}
-          />
-          <LoadingImages
-            index={3}
-            src={images.Set2}
-            direction={'up'}
-            style={{ order: 0 }}
-            alt={'Movie Set 2'}
-          />
-        </motion.div>
-        <motion.div
-          variants={variantOne}
-          initial='initial'
-          animate='animate'
-          className={styles.child}
-        >
-          <LoadingImages
-            index={0}
-            src={images.MovieTheater}
-            direction={'down'}
-            style={{ order: 0 }}
-            alt={'Movie Theater'}
-          />
-          <LoadingImages
-            index={1}
-            src={images.OldMan}
-            direction={'down'}
-            style={{ order: 1 }}
-            alt={'Old Man portrait'}
-          />
-          <LoadingImages
-            index={2}
-            src={images.Set}
-            direction={'down'}
-            style={{ order: 2 }}
-            alt={'Movie Set'}
-            zoom={true}
-          />
-          <LoadingImages
-            index={3}
-            src={images.TwoOldMen}
-            direction={'down'}
-            style={{ order: 3 }}
-            alt={'Two Old Men'}
-          />
-        </motion.div>
-        <motion.div
-          variants={variantTwo}
-          initial='initial'
-          animate='animate'
-          className={styles.child}
-        >
-          <LoadingImages
-            index={0}
-            src={images.Lady}
-            direction={'up'}
-            style={{ order: 3 }}
-            alt={'Rajasthani Woman'}
-          />
-          <LoadingImages
-            index={1}
-            src={images.Model}
-            direction={'up'}
-            style={{ order: 2 }}
-            alt={'Model PhotoShoot'}
-          />
-          <LoadingImages
-            index={2}
-            src={images.Model2}
-            direction={'up'}
-            style={{ order: 1 }}
-            alt={'Model PhotoShoot 2'}
-          />
-          <LoadingImages
-            index={3}
-            src={images.Set2}
-            direction={'up'}
-            style={{ order: 0 }}
-            alt={'Movie Set 2'}
-          />
-        </motion.div>
-        <motion.div
-          variants={variantOne}
-          initial='initial'
-          animate='animate'
-          className={styles.child}
-        >
-          <LoadingImages
-            index={0}
-            src={images.MovieTheater}
-            direction={'down'}
-            style={{ order: 0 }}
-            alt={'Movie Theater'}
-          />
-          <LoadingImages
-            index={1}
-            src={images.OldMan}
-            direction={'down'}
-            style={{ order: 1 }}
-            alt={'Old Man portrait'}
-          />
-          <LoadingImages
-            index={2}
-            src={images.Set}
-            direction={'down'}
-            style={{ order: 2 }}
-            alt={'Movie Set'}
-          />
-          <LoadingImages
-            index={3}
-            src={images.TwoOldMen}
-            direction={'down'}
-            style={{ order: 3 }}
-            alt={'Two Old Men'}
-          />
-        </motion.div>
-      </div>
+      <AnimatePresence onExitComplete={() => setCanScroll(true)}>
+        {start && (
+          <motion.div
+            onAnimationComplete={() => setShow(true)}
+            variants={contVariant}
+            initial='initial'
+            animate='animate'
+            exit='exit'
+            className={styles.effectBackground}
+          >
+            <div className={styles.text}>
+              <div className={styles.lineMask}>
+                <AnimatePresence>
+                  {show ? (
+                    <motion.p
+                      onAnimationComplete={() => {
+                        setShow(false)
+                        setTimeout(() => setStart(false), 1500)
+                      }}
+                      variants={animate}
+                      initial='initial'
+                      animate='open'
+                      exit='exit'
+                    >
+                      Sarath Menon Studios
+                    </motion.p>
+                  ) : null}
+                </AnimatePresence>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }
