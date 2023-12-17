@@ -50,3 +50,7 @@ Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 56 / 64 / 80 / 96 / 128 
 
 Loading Page animation Changed. The initial plan was too complicated
+
+###BREAKPOINTS###
+
+75em, 64em, 48em, 27em, 24em, 20em
