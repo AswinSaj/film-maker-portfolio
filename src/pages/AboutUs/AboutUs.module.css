@@ -51,6 +51,7 @@
 }
 .email{
   font-size: 1.8rem;
+  width: fit-content;
   text-decoration: none;
   font-family: 'Cinzel', serif;
   font-weight: 500;
