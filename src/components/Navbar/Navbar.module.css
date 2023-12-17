@@ -1,0 +1,41 @@
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+}
+.logo{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+.logoLink{
+  font-size: 3rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+.navLinks{
+  list-style-type: none;
+  display: flex;
+  gap: 3rem;
+}
+.navLink{
+  font-size: 2.5rem ;
+  text-decoration: none;
+}
+.navLinks .navLink {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+}
+.logoLink:hover, .navLink:hover{
+  cursor: pointer;
+}
+@media (max-width: 36em){
+  .navLinks{
+    display: none;
+  }
+}
+@media (max-width: 20em){
+  .logoLink{
+    font-size: 2.2rem;
+  }
+}

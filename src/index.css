@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root{
-  --color-bg: #1c1c1c;
+  /* --color-bg: #1c1c1c; 
+   --color-text: #E1C564; */
+  --color-bg: #000;
   --color-gray:#f4f4f4;
   --color-white: #fff;
   --color-black: #000;
-  --color-text: #E1C564;
+  
+  --color-text: #d8c8af;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,9 +20,18 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  
 }
-.content{
-  height: 200svh;
-  font-size: 5rem;
-  background-color: grey;
+::selection{
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+.container{
+  width: 100%;
+  padding: 3rem 5rem;
+}
+.active{
+  text-decoration: underline;
 }
