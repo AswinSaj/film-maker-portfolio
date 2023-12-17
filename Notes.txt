@@ -7,6 +7,7 @@ Examples:
 Film Titles
 Project Names
 Section Headings
+
 Playfair Display:
 
 Usage: Playfair Display is a stylish serif font that can work well for subheadings and other places where you want to add a touch of sophistication without overpowering the design.
@@ -14,6 +15,7 @@ Examples:
 Subheadings
 Project Descriptions
 Featured Content Titles
+
 Montserrat:
 
 Usage: Montserrat is a versatile sans-serif font that is clean and modern, making it suitable for body text and other areas where readability is crucial.
@@ -26,7 +28,7 @@ Calls to Action
 ###COLORS###
 
 primary: #1C1C1C
-Font-color: #E1C564
+Font-color: #d8c8af
 
 
 ###SIZING###

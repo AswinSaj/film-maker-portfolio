@@ -24,7 +24,10 @@ const LoadingScreen = () => {
   }
   return (
     <>
-      <AnimatePresence onExitComplete={() => setCanScroll(true)}>
+      <AnimatePresence
+        initial={false}
+        onExitComplete={() => setCanScroll(true)}
+      >
         {start && (
           <motion.div
             onAnimationComplete={() => setShow(true)}
