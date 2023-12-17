@@ -1,0 +1,60 @@
+.mainContainer {
+  height: 100svh;
+}
+.effectBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg);
+  height: 100svh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* left: -100vw; */
+}
+.text {
+  color: var(--color-text);
+  font-size: 20rem;
+}
+.text p {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  position: relative;
+  top: 100%;
+}
+.lineMask {
+  overflow: hidden;
+}
+
+@media (max-width: 75em) {
+  .text {
+    font-size: 15rem;
+  }
+}
+@media (max-width:64em){
+  .text {
+    font-size: 13rem;
+  }
+}
+@media (max-width: 48em) {
+  .text {
+    font-size: 10rem;
+  }
+}
+@media (max-width: 27em) {
+  .text p{
+    text-align: center;
+    text-wrap: wrap;
+  }
+}
+@media (max-width: 24em) {
+  .text {
+    font-size: 8rem;
+  }
+}
+@media (max-width: 20em) {
+  .text {
+    font-size: 7rem;
+  }
+}
