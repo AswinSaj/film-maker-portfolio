@@ -101,7 +101,7 @@ const AboutUs = () => {
             {!readMore && (
               <span
                 className={styles.readMore}
-                onClick={() => setReadMore((prevValue) => !prevValue)}
+                onClick={() => setReadMore(!readMore)}
               >
                 Read more...
               </span>
@@ -129,7 +129,7 @@ const AboutUs = () => {
                 {readMore && (
                   <span
                     className={styles.readMore}
-                    onClick={() => setReadMore((prevValue) => !prevValue)}
+                    onClick={() => setReadMore(!readMore)}
                   >
                     Collapse
                   </span>
