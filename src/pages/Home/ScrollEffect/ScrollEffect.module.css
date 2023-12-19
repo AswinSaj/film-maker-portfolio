@@ -91,12 +91,12 @@
 @media (max-width: 27em) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
-    height: 150svh;
+    height: 130svh;
   }
 }
 @media (max-width: 20em) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
-    height: 120svh;
+    height: 130svh;
   }
 }

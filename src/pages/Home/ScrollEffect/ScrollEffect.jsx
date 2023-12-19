@@ -76,16 +76,16 @@ import Column from "./Column";
 import styles from "./ScrollEffect.module.css";
 import { useTransform, useScroll } from "framer-motion";
 
-import s1 from "../../assets/Images/woman.jpg";
-import s2 from "../../assets/Images/lady.jpg";
-import s3 from "../../assets/Images/woman.jpg";
-import s4 from "../../assets/Images/rose.jpg";
-import s5 from "../../assets/Images/woods.jpg";
-import s6 from "../../assets/Images/architecture.jpg";
-import s7 from "../../assets/Images/woman looking.jpg";
-import s8 from "../../assets/Images/lady3.jpg";
-import s9 from "../../assets/Images/woods2.jpg";
-import s10 from "../../assets/Images/man_looking.jpg";
+import s1 from "../../../assets/Images/Potrait/woman.jpg";
+import s2 from "../../../assets/Images/Potrait/lady.jpg";
+import s3 from "../../../assets/Images/Potrait/woman.jpg";
+import s4 from "../../../assets/Images/Potrait/rose.jpg";
+import s5 from "../../../assets/Images/Potrait/woods.jpg";
+import s6 from "../../../assets/Images/Potrait/architecture.jpg";
+import s7 from "../../../assets/Images/Potrait/woman looking.jpg";
+import s8 from "../../../assets/Images/Potrait/lady3.jpg";
+import s9 from "../../../assets/Images/Potrait/woods2.jpg";
+import s10 from "../../../assets/Images/Potrait/man_looking.jpg";
 
 const images = [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10];
 
